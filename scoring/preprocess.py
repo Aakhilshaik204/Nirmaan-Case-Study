@@ -2,7 +2,7 @@ import re
 import nltk
 from nltk.tokenize import word_tokenize, sent_tokenize
 
-nltk.download('punkt')
+from nltk.tokenize import word_tokenize, sent_tokenize
 
 FILLER_WORDS = ["um", "uh", "like", "you know", "so", "actually", "basically",
                 "right", "i mean", "well", "kinda", "sort of", "okay", "hmm", "ah"]
