@@ -2,6 +2,10 @@
 
 A Streamlit application designed to evaluate and score communication skills from text transcripts. This tool analyzes various aspects of speech such as content, structure, speech rate, grammar, vocabulary, clarity, and engagement based on a customizable rubric.
 
+## 🌐 Live Demo
+
+**[Click Here to Try the App](https://nirmaan.streamlit.app/)**
+
 ## 🎯 Problem Statement
 
 In educational and professional settings, evaluating communication skills objectively is challenging. Manual grading is time-consuming, subjective, and often lacks immediate, granular feedback.
