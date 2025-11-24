@@ -44,7 +44,7 @@ The final score (0-100) is a weighted sum of the following components. The weigh
 
 ## 📸 Sample Result
 
-*(Add a screenshot of the application here)*
+![Sample Result](assets/sample_result.png)
 
 > **Tip**: The application provides a detailed breakdown like the one below:
 
