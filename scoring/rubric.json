@@ -1,0 +1,179 @@
+{
+  "content_and_structure": {
+    "weight": 40,
+    "salutation": {
+      "weight": 5,
+      "rules": {
+        "no_salutation": {
+          "score": 0,
+          "keywords": []
+        },
+        "normal": {
+          "score": 2,
+          "keywords": [
+            "hi",
+            "hello"
+          ]
+        },
+        "good": {
+          "score": 4,
+          "keywords": [
+            "good morning",
+            "good afternoon",
+            "good evening",
+            "good day",
+            "hello everyone"
+          ]
+        },
+        "excellent": {
+          "score": 5,
+          "keywords": [
+            "i am excited to introduce",
+            "feeling great"
+          ]
+        }
+      }
+    },
+    "keyword_presence": {
+      "weight": 30,
+      "must_have": {
+        "score_each": 4,
+        "keywords": [
+          "name",
+          "age",
+          "school",
+          "class",
+          "family",
+          "hobby",
+          "hobbies",
+          "interest",
+          "free time"
+        ]
+      },
+      "good_to_have": {
+        "score_each": 2,
+        "keywords": [
+          "about family",
+          "i am from",
+          "parents are from",
+          "goal",
+          "dream",
+          "ambition",
+          "fun fact",
+          "interesting thing",
+          "unique",
+          "strength",
+          "achievement"
+        ]
+      }
+    },
+    "flow": {
+      "weight": 5,
+      "rules": {
+        "correct_order": {
+          "score": 5,
+          "order": [
+            "salutation",
+            "basic_details",
+            "optional_details",
+            "closing"
+          ]
+        },
+        "incorrect_order": {
+          "score": 0
+        }
+      }
+    }
+  },
+  "speech_rate": {
+    "weight": 10,
+    "rules": {
+      "too_fast": {
+        "wpm": ">161",
+        "score": 2
+      },
+      "fast": {
+        "wpm": "141-160",
+        "score": 6
+      },
+      "ideal": {
+        "wpm": "111-140",
+        "score": 10
+      },
+      "slow": {
+        "wpm": "81-110",
+        "score": 6
+      },
+      "too_slow": {
+        "wpm": "<80",
+        "score": 2
+      }
+    }
+  },
+  "language_and_grammar": {
+    "weight": 20,
+    "grammar": {
+      "weight": 10,
+      "formula": "1 - min(errors_per_100_words / 10, 1)",
+      "scoring": {
+        "0.9-1.0": 10,
+        "0.7-0.89": 8,
+        "0.5-0.69": 6,
+        "0.3-0.49": 4,
+        "<0.3": 2
+      }
+    },
+    "vocabulary": {
+      "weight": 10,
+      "metric": "TTR",
+      "scoring": {
+        "0.9-1.0": 10,
+        "0.7-0.89": 8,
+        "0.5-0.69": 6,
+        "0.3-0.49": 4,
+        "0-0.29": 2
+      }
+    }
+  },
+  "clarity": {
+    "weight": 15,
+    "filler_words": {
+      "list": [
+        "um",
+        "uh",
+        "like",
+        "you know",
+        "so",
+        "actually",
+        "basically",
+        "right",
+        "i mean",
+        "well",
+        "kinda",
+        "sort of",
+        "okay",
+        "hmm",
+        "ah"
+      ],
+      "scoring": {
+        "0-3": 15,
+        "4-6": 12,
+        "7-9": 9,
+        "10-12": 6,
+        "13+": 3
+      }
+    }
+  },
+  "engagement": {
+    "weight": 15,
+    "sentiment": {
+      "scoring": {
+        ">=0.9": 15,
+        "0.7-0.89": 12,
+        "0.5-0.69": 9,
+        "0.3-0.49": 6,
+        "<0.3": 3
+      }
+    }
+  }
+}
