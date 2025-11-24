@@ -49,14 +49,13 @@ The final score (0-100) is a weighted sum of the following components. The weigh
 > **Tip**: The application provides a detailed breakdown like the one below:
 
 ```text
-Final Score: 85/100
-
-Content & Structure: 35.0/40
- - Salutation: Good (4/5)
- - Keywords: Found Name, Age, Hobby (26/30)
- - Flow: Logical (5/5)
-
-Speech Rate: Ideal (125 WPM)
+Content & Structure: 57.5% of 40 -> contribution 23.00.
+ - Salutation: Good salutation found (e.g., 'good morning', 'hello everyone').
+ - Keywords: Found keywords: school, class, family, fun fact. Sufficient exact keyword matches.
+ - Flow: Order follows recommended flow.
+Speech Rate: Too fast (173 WPM). (173.1 WPM)
+Grammar: 8 / 10 (4 grammar issues)
+Vocabulary (TTR): 0.593 -> score 6/10
 ...
 ```
 
