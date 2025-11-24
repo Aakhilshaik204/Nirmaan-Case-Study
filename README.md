@@ -2,6 +2,22 @@
 
 A Streamlit application designed to evaluate and score communication skills from text transcripts. This tool analyzes various aspects of speech such as content, structure, speech rate, grammar, vocabulary, clarity, and engagement based on a customizable rubric.
 
+## 🎯 Problem Statement
+
+In educational and professional settings, evaluating communication skills objectively is challenging. Manual grading is time-consuming, subjective, and often lacks immediate, granular feedback.
+
+**Nirmaan Case Study** solves this by providing an automated, consistent, and instant scoring mechanism. It helps students and professionals understand their strengths and weaknesses in speech structure, clarity, and engagement without needing a human evaluator.
+
+## 🛠️ Tech Stack
+
+*   **Frontend**: [Streamlit](https://streamlit.io/) (Python-based web framework)
+*   **NLP & Processing**:
+    *   `nltk`: Natural Language Toolkit for tokenization and grammar checking.
+    *   `vaderSentiment`: For sentiment and emotion analysis.
+    *   `language-tool-python`: For advanced grammar and style checking.
+    *   `sentence-transformers`: For semantic similarity matching (optional/advanced usage).
+*   **Data Handling**: `pandas`, `numpy`.
+
 ## 🚀 Features
 
 *   **Rubric-Based Scoring**: customizable scoring rules defined in `scoring/rubric.json`.
@@ -14,27 +30,35 @@ A Streamlit application designed to evaluate and score communication skills from
 *   **Interactive UI**: User-friendly interface built with Streamlit for easy input and result visualization.
 *   **Detailed Feedback**: Provides specific feedback for each scoring criterion.
 
-## � Scoring Breakdown
+## 📊 Scoring Breakdown
 
-The final score (0-100) is a weighted sum of the following components:
+The final score (0-100) is a weighted sum of the following components. The weights are fully customizable in `scoring/rubric.json`.
 
-1.  **Content & Structure (40%)**
-    *   **Salutation (5%)**: Checks for appropriate opening greetings.
-    *   **Keyword Presence (30%)**: Checks for required and recommended keywords/topics.
-    *   **Flow (5%)**: logical order of speech (Salutation -> Basic Details -> Optional Details -> Closing).
+| Component | Weight | Description |
+| :--- | :--- | :--- |
+| **Content & Structure** | **40%** | **Core Message Quality**<br>• **Salutation (5%)**: Opening greetings (e.g., "Good morning").<br>• **Keywords (30%)**: Presence of required topics (Name, Age, School, Hobbies, etc.).<br>• **Flow (5%)**: Logical sequence (Salutation → Details → Closing). |
+| **Language & Grammar** | **20%** | **Linguistic Accuracy**<br>• **Grammar (10%)**: Penalizes errors per 100 words.<br>• **Vocabulary (10%)**: Type-Token Ratio (TTR) for lexical diversity. |
+| **Clarity** | **15%** | **Fluency**<br>• Penalizes excessive filler words (*um, uh, like, you know*). |
+| **Engagement** | **15%** | **Tone & Emotion**<br>• Rewards positive sentiment and enthusiastic tone. |
+| **Speech Rate** | **10%** | **Pacing**<br>• Ideal range: **111-140 WPM**.<br>• Penalties for being too fast (>160) or too slow (<80). |
 
-2.  **Language & Grammar (20%)**
-    *   **Grammar (10%)**: Penalizes grammatical errors per 100 words.
-    *   **Vocabulary (10%)**: Measures Type-Token Ratio (TTR) for lexical diversity.
+## 📸 Sample Result
 
-3.  **Clarity (15%)**
-    *   **Filler Words**: Penalizes excessive use of filler words (um, uh, like, etc.).
+*(Add a screenshot of the application here)*
 
-4.  **Engagement (15%)**
-    *   **Sentiment**: Rewards positive sentiment and emotional tone.
+> **Tip**: The application provides a detailed breakdown like the one below:
 
-5.  **Speech Rate (10%)**
-    *   **Pacing**: Scores based on Words Per Minute (WPM), targeting an ideal range (111-140 WPM).
+```text
+Final Score: 85/100
+
+Content & Structure: 35.0/40
+ - Salutation: Good (4/5)
+ - Keywords: Found Name, Age, Hobby (26/30)
+ - Flow: Logical (5/5)
+
+Speech Rate: Ideal (125 WPM)
+...
+```
 
 ## �🛠️ Installation
 
