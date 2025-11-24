@@ -14,7 +14,29 @@ A Streamlit application designed to evaluate and score communication skills from
 *   **Interactive UI**: User-friendly interface built with Streamlit for easy input and result visualization.
 *   **Detailed Feedback**: Provides specific feedback for each scoring criterion.
 
-## 🛠️ Installation
+## � Scoring Breakdown
+
+The final score (0-100) is a weighted sum of the following components:
+
+1.  **Content & Structure (40%)**
+    *   **Salutation (5%)**: Checks for appropriate opening greetings.
+    *   **Keyword Presence (30%)**: Checks for required and recommended keywords/topics.
+    *   **Flow (5%)**: logical order of speech (Salutation -> Basic Details -> Optional Details -> Closing).
+
+2.  **Language & Grammar (20%)**
+    *   **Grammar (10%)**: Penalizes grammatical errors per 100 words.
+    *   **Vocabulary (10%)**: Measures Type-Token Ratio (TTR) for lexical diversity.
+
+3.  **Clarity (15%)**
+    *   **Filler Words**: Penalizes excessive use of filler words (um, uh, like, etc.).
+
+4.  **Engagement (15%)**
+    *   **Sentiment**: Rewards positive sentiment and emotional tone.
+
+5.  **Speech Rate (10%)**
+    *   **Pacing**: Scores based on Words Per Minute (WPM), targeting an ideal range (111-140 WPM).
+
+## �🛠️ Installation
 
 1.  **Clone the repository** (if applicable) or navigate to the project directory.
 
